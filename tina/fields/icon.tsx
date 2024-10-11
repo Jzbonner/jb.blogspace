@@ -41,11 +41,11 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
                 variant={open ? "secondary" : "white"}
               >
                 {InputIcon && (
-                  <InputIcon className="w-7 mr-1 h-auto fill-current text-blue-500" />
+                  <InputIcon className="h-auto mr-1 text-blue-500 fill-current w-7" />
                 )}
                 {inputLabel}
                 {!InputIcon && (
-                  <BiChevronRight className="w-5 h-auto fill-current opacity-70 ml-1" />
+                  <BiChevronRight className="w-5 h-auto ml-1 fill-current opacity-70" />
                 )}
               </Button>
             </Popover.Button>
@@ -61,10 +61,10 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
                 leaveFrom="transform opacity-100 translate-y-0"
                 leaveTo="transform opacity-0 -translate-y-2"
               >
-                <Popover.Panel className="relative overflow-hidden rounded-lg shadow-lg bg-white border border-gray-150 z-50">
+                <Popover.Panel className="relative z-50 overflow-hidden bg-white border rounded-lg shadow-lg border-gray-150">
                   {({ close }) => (
                     <div className="max-h-[24rem] flex flex-col w-full h-full">
-                      <div className="bg-gray-50 p-2 border-b border-gray-100 z-10 shadow-sm">
+                      <div className="z-10 p-2 border-b border-gray-100 shadow-sm bg-gray-50">
                         <input
                           type="text"
                           className="bg-white text-sm rounded-sm border border-gray-100 shadow-inner py-1.5 px-2.5 w-full block placeholder-gray-200"
@@ -80,14 +80,14 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
                         />
                       </div>
                       {filteredBlocks.length === 0 && (
-                        <span className="relative text-center text-xs px-2 py-3 text-gray-300 bg-gray-50 italic">
+                        <span className="relative px-2 py-3 text-xs italic text-center text-gray-300 bg-gray-50">
                           No matches found
                         </span>
                       )}
                       {filteredBlocks.length > 0 && (
-                        <div className="w-full grid grid-cols-6 auto-rows-auto p-2 overflow-y-auto">
+                        <div className="grid w-full grid-cols-6 p-2 overflow-y-auto auto-rows-auto">
                           <button
-                            className="relative rounded-lg text-center text-xs py-2 px-3 flex-1 outline-none transition-all ease-out duration-150 hover:text-blue-500 focus:text-blue-500 focus:bg-gray-50 hover:bg-gray-50"
+                            className="relative flex-1 px-3 py-2 text-xs text-center transition-all duration-150 ease-out rounded-lg outline-none hover:text-blue-500 focus:text-blue-500 focus:bg-gray-50 hover:bg-gray-50"
                             key={"clear-input"}
                             onClick={() => {
                               input.onChange("");
@@ -100,7 +100,7 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
                           {filteredBlocks.map((name) => {
                             return (
                               <button
-                                className="relative flex items-center justify-center rounded-lg text-center text-xs py-2 px-3 flex-1 outline-none transition-all ease-out duration-150 hover:text-blue-500 focus:text-blue-500 focus:bg-gray-50 hover:bg-gray-50"
+                                className="relative flex items-center justify-center flex-1 px-3 py-2 text-xs text-center transition-all duration-150 ease-out rounded-lg outline-none hover:text-blue-500 focus:text-blue-500 focus:bg-gray-50 hover:bg-gray-50"
                                 key={name}
                                 onClick={() => {
                                   input.onChange(name);
@@ -114,7 +114,7 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
                                     size: "custom",
                                     color: "blue",
                                   }}
-                                  className="w-7 h-auto"
+                                  className="h-auto w-7"
                                 />
                               </button>
                             );

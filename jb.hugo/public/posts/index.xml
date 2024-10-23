@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jzbonner.dev</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content on jzbonner.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>jarrett.bonner@gmail.com (Jarrett Bonner)</managingEditor>
+    <webMaster>jarrett.bonner@gmail.com (Jarrett Bonner)</webMaster>
+    <copyright>© 2024 Jarrett Bonner</copyright>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,4 +1,0 @@
-[submodule "jb.hugo/themes/blowfish"]
-	path = jb.hugo/themes/blowfish
-	url = https://github.com/nunocoracao/blowfish.git
-	branch = main
